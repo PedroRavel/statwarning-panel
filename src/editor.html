@@ -1,0 +1,75 @@
+<div class="section gr-form-group">
+
+<h5 class="section-heading">Fontsize/Color options</h5>
+  <div class = "gf-form">
+
+    <label class = "gf-form-label width-8">Font Size</label>
+    <input type = "text" class ="gf-form-input width-4" ng-model="ctrl.panel.fontSize" ng-change="ctrl.render()" ng-model-onblur>
+  </div>
+  <div class="gf-form">
+    <label class="gf-form-label width-8">Bg Color</label>
+    <span class="max-width-4">
+      <spectrum-picker class="gf-form-input" ng-model="ctrl.panel.bgColor" ng-change="ctrl.render()" ></spectrum-picker>
+    </span>
+  </div>
+</div>
+<div class="section gr-form-group">
+  <h5 class="section-heading">Text options</h5>
+  <div class="gf-form">
+    <label class="gf-form-label width-6">Title</label>
+    <input type="text" class="gf-form-input max-width-12" ng-model="ctrl.panel.text.title" ng-change="ctrl.render()" ng-model-onblur>
+  </div>
+  <div class="gf-form">
+    <label class="gf-form-label width-6">Stat Name</label>
+    <input type="text" class="gf-form-input max-width-12" ng-model="ctrl.panel.text.name" ng-change="ctrl.render()" ng-model-onblur>
+  </div>
+  <div class="gf-form">
+    <label class="gf-form-label width-6">SubText</label>
+    <input type="text" class="gf-form-input max-width-12" ng-model="ctrl.panel.text.subText" ng-change="ctrl.render()" ng-model-onblur>
+  </div>
+  <gf-form-switch class="gf-form" label="Show Stat" label-class="width-13" checked="ctrl.panel.values.showValue" on-change="ctrl.render()"></gf-form-switch>
+</div>
+<div class="section gr-form-group">
+  <h5 class="section-heading">Set Max Thresholds</h5>
+  <gf-form-switch class="gf-form" label="Warn Max" label-class="width-7" checked="ctrl.panel.threshold.warningAbove.set" on-change="ctrl.render()"></gf-form-switch>
+  <gf-form-switch class="gf-form" label="Critical Max" label-class="width-7" checked="ctrl.panel.threshold.criticalAbove.set" on-change="ctrl.render()"></gf-form-switch>
+</div>
+<div class="section gr-form-group">
+  <h5 class="section-heading">Max Values</h5>
+
+  <div class="gf-form">
+    <label class="gf-form-label width-7">Warn Max</label>
+    <input type="text" class="gf-form-input max-width-4" ng-model="ctrl.panel.threshold.warningAbove.value" ng-change="ctrl.setThresholds(ctrl.panel.threshold.warningAbove)" ng-model-onblur>
+  </div>
+
+  <div class="gf-form">
+    <label class="gf-form-label width-7">Critical Max</label>
+    <input type="text" class="gf-form-input max-width-4" ng-model="ctrl.panel.threshold.criticalAbove.value" ng-change="ctrl.setThresholds(ctrl.panel.threshold.criticalAbove)" ng-model-onblur>
+  </div>
+</div>
+<div class="section gr-form-group">
+  <h5 class="section-heading">Set Min Thresholds</h5>
+  <gf-form-switch class="gf-form" label="Warn Min" label-class="width-7" checked="ctrl.panel.threshold.warningBelow.set" on-change="ctrl.render()"></gf-form-switch>
+  <gf-form-switch class="gf-form" label="Critical Min" label-class="width-7" checked="ctrl.panel.threshold.criticalBelow.set" on-change="ctrl.render()"></gf-form-switch>
+</div>
+
+<div class="section gr-form-group">
+  <h5 class="section-heading">Max Values</h5>
+
+  <div class="gf-form">
+    <label class="gf-form-label width-7">Warn Min</label>
+    <input type="text" class="gf-form-input max-width-4" ng-model="ctrl.panel.threshold.warningBelow.value" ng-change="ctrl.setThresholds(ctrl.panel.threshold.warningBelow)" ng-model-onblur>
+  </div>
+
+  <div class="gf-form">
+    <label class="gf-form-label width-7">Critical Min</label>
+    <input type="text" class="gf-form-input max-width-4" ng-model="ctrl.panel.threshold.criticalBelow.value" ng-change="ctrl.setThresholds(ctrl.panel.threshold.criticalBelow)" ng-model-onblur>
+  </div>
+</div>
+<div class="section gr-form-group">
+  <h5 class="section-heading">Size</h5>
+  <input type="submit" class="gf-form-btn max-width-16" value = "  +  "  ng-click="ctrl.increaseSize()">
+  <input type="submit" class="gf-form-btn max-width-16" value = "  -  "  ng-click="ctrl.decreaseSize()">
+</div>
+
+</div>

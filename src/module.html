@@ -1,0 +1,18 @@
+
+<div ng-if = "ctrl.panel.text.title.length !== 0">
+  <div class = "row">
+    <h2 class = "text-center" style="font-size: {{ctrl.panel.fontSize}};font-family:{{ctrl.panel.font.family}}">{{ctrl.panel.text.title}}</h2>
+  </div>
+</div>
+<center>
+  <img style = "position:relative;padding:5px"src="public/plugins/grafana-statwarning-panel/images/{{ctrl.panel.image}}" height="{{ctrl.panel.height}}" width="{{ctrl.panel.width}}">
+</center>
+<div class = "row">
+<h3 class = "text-center" style="font-size: {{ctrl.panel.fontSize}};font-family:{{ctrl.panel.font.family}};position:relative;padding:10px">
+    <span>
+      {{ctrl.setMessage()}}{{ctrl.statName()}}
+    </span>
+    <div ng-if="ctrl.panel.values.showValue">{{ctrl.metrics.valueFormated}}</div>
+    <div>{{ctrl.panel.text.subText}}</div>
+</h3>
+</div>

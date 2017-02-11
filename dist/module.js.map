@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/module.js"],"names":["StatWarningCtrl"],"mappings":";;;;;;;;AAAQA,qB,uBAAAA,e;;;2BAGNA,e","file":"module.js","sourcesContent":["import {StatWarningCtrl} from './statwarning_ctrl.js';\n\nexport {\n  StatWarningCtrl as PanelCtrl\n};\n"]}

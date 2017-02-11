@@ -1,0 +1,35 @@
+{
+  "type": "panel",
+  "name": "StatWarning",
+  "id": "grafana-statwarning-panel",
+
+  "pages": [
+    { "name": "Live stream", "component": "StreamPageCtrl", "role": "Editor"},
+    { "name": "Log view", "component": "LogsPageCtrl", "role": "Viewer"}
+  ],
+
+  "css": {
+    "dark":  "css/dark.css",
+    "light":  "css/light.css"
+  },
+
+  "info": {
+    "description": "StatWarning panel for Grafana",
+    "author": {
+      "name": "Pedro Ravel",
+      "url": ""
+    },
+    "keywords": ["StatWarning, Panel"],
+    "version": "0.0.1",
+    "updated": "2017-01-01"
+  },
+
+  "includes": [
+
+  ],
+
+  "dependencies": {
+    "grafanaVersion": "3.x.x",
+    "plugins": []
+  }
+}
